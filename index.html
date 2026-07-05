@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AR Food Viewer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AirPods AR Viewer</title>
 
   <script type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
@@ -34,11 +34,11 @@
       position: absolute;
       top: 20px;
       right: 20px;
-      width: 240px;
-      background: rgba(255,255,255,0.95);
+      width: 250px;
+      background: rgba(255, 255, 255, 0.95);
       padding: 18px;
       border-radius: 18px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
       z-index: 10;
     }
 
@@ -66,28 +66,33 @@
 <body>
 
   <div class="info-card">
-    <h2>🍔 Zinger Burger</h2>
-    <p>💰 Price: ₹350</p>
-    <p>🔥 Calories: 650 Cal</p>
-    <p>⭐ Rating: 4.6 / 5</p>
-    <p>🌶️ Spice Level: Medium</p>
+    <h2>🎧 AirPods</h2>
+    <p>🔋 Battery: Up to 6 Hours</p>
+    <p>🎵 Spatial Audio</p>
+    <p>📶 Bluetooth 5.3</p>
+    <p>⭐ Rating: 4.8 / 5</p>
   </div>
 
   <model-viewer
     src="./object_0.glb"
-    alt="3D Food Model"
+    alt="3D AirPods Model"
+
     camera-controls
     auto-rotate
     auto-rotate-delay="0"
     rotation-per-second="30deg"
+
     shadow-intensity="1"
     exposure="1"
+
     ar
     ar-modes="webxr scene-viewer quick-look"
-    ar-scale="fixed">
+    ar-scale="fixed"
+
+    scale="0.005 0.005 0.005">
 
     <button slot="ar-button" class="ar-btn">
-      🍔 View in AR
+      🎧 View in AR
     </button>
 
   </model-viewer>
